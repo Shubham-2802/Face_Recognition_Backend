@@ -49,8 +49,8 @@ app.post('/Forgot', (req,res) => {forgot.handleForgot(req,res,db)})
 
 app.post('/Reset', (req,res) => {reset.handleReset(req,res,bcrypt,db)})	
 
-app.listen(3000,() => {
-	console.log('Server is running at Port:3000')
+app.listen(process.env.PORT || 3000,() => {
+	console.log('Server is running at Port: ${process.env.PORT}')
 })
 
 // bcrypt.hash("bacon", null, null, function(err, hash) {
