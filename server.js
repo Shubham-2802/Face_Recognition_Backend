@@ -33,7 +33,7 @@ const app = express()
 app.use(cors())
 app.use(bodyParser.json())
 
-app.get('/',(req,res)=>{res.send(database.users)})
+app.get('/',(req,res)=>{res.send("Hello,Its working")})
 
 app.post('/signIn', (req,res) => {signin.handlesignIn(req,res,bcrypt,db)})
 
